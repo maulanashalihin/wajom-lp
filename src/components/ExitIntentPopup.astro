@@ -1,0 +1,230 @@
+<!-- Exit Intent Popup -->
+<div id="exit-intent-popup" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] opacity-0 invisible transition-all duration-300">
+	<div class="flex items-center justify-center min-h-screen p-4">
+		<div class="bg-white rounded-3xl shadow-2xl max-w-md w-full transform scale-95 transition-all duration-300 relative overflow-hidden">
+			<!-- Close Button -->
+			<button id="close-exit-popup" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors z-10">
+				<svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+			
+			<!-- Background Pattern -->
+			<div class="absolute inset-0 opacity-5">
+				<svg class="w-full h-full" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<pattern id="exit-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+							<circle cx="30" cy="30" r="2" fill="#3B82F6"/>
+							<circle cx="15" cy="15" r="1" fill="#10B981"/>
+							<circle cx="45" cy="45" r="1" fill="#F59E0B"/>
+						</pattern>
+					</defs>
+					<rect width="100%" height="100%" fill="url(#exit-pattern)"/>
+				</svg>
+			</div>
+			
+			<div class="relative p-8">
+				<!-- Urgency Badge -->
+				<div class="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 text-xs font-bold rounded-full mb-4 animate-pulse">
+					<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+					</svg>
+					Jangan Terlepas!
+				</div>
+				
+				<!-- Main Content -->
+				<h3 class="text-2xl font-black text-gray-900 mb-3 leading-tight">
+					Tunggu Dulu! 🛑
+				</h3>
+				<p class="text-lg font-bold text-wajom-600 mb-2">
+					Dapatkan <span class="text-red-600">DISKON 50%</span> Sebelum Pergi!
+				</p>
+				<p class="text-gray-600 mb-6 leading-relaxed">
+					Jangan sia-siakan peluang untuk meningkatkan sales team anda dengan automasi WhatsApp yang terbukti berkesan.
+				</p>
+				
+				<!-- Special Offer -->
+				<div class="bg-gradient-to-r from-wajom-50 to-green-50 rounded-2xl p-4 mb-6 border border-wajom-200">
+					<div class="flex items-center justify-between mb-3">
+						<div>
+							<p class="text-sm text-gray-500 line-through">Harga Normal: RM297/bulan</p>
+							<p class="text-xl font-black text-wajom-600">Harga Khas: RM149/bulan</p>
+						</div>
+						<div class="text-right">
+							<span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-50%</span>
+						</div>
+					</div>
+					
+					<!-- Countdown Timer -->
+					<div class="flex items-center justify-center space-x-2 mb-3">
+						<span class="text-sm font-medium text-gray-600">Tawaran berakhir dalam:</span>
+						<div class="flex space-x-1">
+							<span id="exit-minutes" class="bg-red-500 text-white text-sm font-bold px-2 py-1 rounded">05</span>
+							<span class="text-red-500 font-bold">:</span>
+							<span id="exit-seconds" class="bg-red-500 text-white text-sm font-bold px-2 py-1 rounded">00</span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- CTA Buttons -->
+				<div class="space-y-3">
+					<a href="https://wa.me/60173084999?text=Saya%20berminat%20dengan%20tawaran%20khas%20Wajom%20diskon%2050%25!" 
+					   class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group">
+						<svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.785"/>
+						</svg>
+						Ambil Tawaran Khas Ini!
+					</a>
+					
+					<button id="maybe-later" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 px-6 rounded-2xl transition-all duration-300">
+						Mungkin Lain Kali
+					</button>
+				</div>
+				
+				<!-- Trust Indicators -->
+				<div class="mt-6 pt-4 border-t border-gray-200">
+					<div class="flex items-center justify-center space-x-4 text-xs text-gray-500">
+						<div class="flex items-center">
+							<svg class="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							30 Hari Jaminan
+						</div>
+						<div class="flex items-center">
+							<svg class="w-3 h-3 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+							</svg>
+							Data Selamat
+						</div>
+						<div class="flex items-center">
+							<svg class="w-3 h-3 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+							</svg>
+							500+ Leaders
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Exit Intent Detection
+	let exitIntentShown = false;
+	let mouseLeaveTimer: number;
+	
+	// Show popup when mouse leaves viewport
+	document.addEventListener('mouseleave', (e) => {
+		if (e.clientY <= 0 && !exitIntentShown) {
+			showExitIntentPopup();
+		}
+	});
+	
+	// Show popup on mobile when user scrolls up quickly
+	let lastScrollY = window.scrollY;
+	let scrollUpCount = 0;
+	
+	window.addEventListener('scroll', () => {
+		const currentScrollY = window.scrollY;
+		
+		if (currentScrollY < lastScrollY) {
+			scrollUpCount++;
+			if (scrollUpCount > 3 && !exitIntentShown && window.innerWidth <= 768) {
+				showExitIntentPopup();
+			}
+		} else {
+			scrollUpCount = 0;
+		}
+		
+		lastScrollY = currentScrollY;
+	});
+	
+	// Show popup after 30 seconds if not shown yet
+	setTimeout(() => {
+		if (!exitIntentShown) {
+			showExitIntentPopup();
+		}
+	}, 30000);
+	
+	function showExitIntentPopup() {
+		if (exitIntentShown) return;
+		
+		exitIntentShown = true;
+		const popup = document.getElementById('exit-intent-popup');
+		const popupContent = popup?.querySelector('div > div');
+		
+		if (popup && popupContent) {
+			popup.classList.remove('opacity-0', 'invisible');
+			popup.classList.add('opacity-100', 'visible');
+			
+			setTimeout(() => {
+				popupContent.classList.remove('scale-95');
+				popupContent.classList.add('scale-100');
+			}, 50);
+			
+			// Start countdown
+			startExitCountdown();
+		}
+		
+		// Store in localStorage to prevent showing again
+		localStorage.setItem('exitIntentShown', 'true');
+	}
+	
+	// Check if popup was already shown
+	if (localStorage.getItem('exitIntentShown')) {
+		exitIntentShown = true;
+	}
+	
+	// Close popup handlers
+	document.getElementById('close-exit-popup')?.addEventListener('click', closeExitPopup);
+	document.getElementById('maybe-later')?.addEventListener('click', closeExitPopup);
+	
+	// Close on backdrop click
+	document.getElementById('exit-intent-popup')?.addEventListener('click', (e) => {
+		if (e.target === e.currentTarget) {
+			closeExitPopup();
+		}
+	});
+	
+	function closeExitPopup() {
+		const popup = document.getElementById('exit-intent-popup');
+		const popupContent = popup?.querySelector('div > div');
+		
+		if (popup && popupContent) {
+			popupContent.classList.remove('scale-100');
+			popupContent.classList.add('scale-95');
+			
+			setTimeout(() => {
+				popup.classList.add('opacity-0', 'invisible');
+				popup.classList.remove('opacity-100', 'visible');
+			}, 150);
+		}
+	}
+	
+	// Countdown Timer
+	function startExitCountdown() {
+		let timeLeft = 5 * 60; // 5 minutes in seconds
+		
+		const timer = setInterval(() => {
+			const minutes = Math.floor(timeLeft / 60);
+			const seconds = timeLeft % 60;
+			
+			const minutesEl = document.getElementById('exit-minutes');
+			const secondsEl = document.getElementById('exit-seconds');
+			
+			if (minutesEl && secondsEl) {
+				minutesEl.textContent = minutes.toString().padStart(2, '0');
+				secondsEl.textContent = seconds.toString().padStart(2, '0');
+			}
+			
+			timeLeft--;
+			
+			if (timeLeft < 0) {
+				clearInterval(timer);
+				// Optionally close popup when timer ends
+				// closeExitPopup();
+			}
+		}, 1000);
+	}
+</script>

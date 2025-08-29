@@ -1,22 +1,31 @@
+---
+import '../styles/global.css';
+import WhatsAppWidget from '../components/WhatsAppWidget.astro';
+import Footer from '../components/Footer.astro';
+import ExitIntentPopup from '../components/ExitIntentPopup.astro';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ms">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content="Platform automasi WhatsApp yang direka khas untuk leader MLM, hartanah, insurans, dan emas. Tingkatkan produktiviti pasukan anda dengan automasi yang pintar." />
+		<meta name="keywords" content="automasi whatsapp, MLM, hartanah, insurans, emas, follow-up automatik, sistem duplikasi" />
+		<title>Wajom - Automasi WhatsApp untuk Leader</title>
 	</head>
-	<body>
+	<body class="antialiased">
 		<slot />
+		
+		<!-- Footer -->
+		<Footer />
+		
+		<!-- WhatsApp Widget -->
+		<WhatsAppWidget />
+		
+		<!-- Exit Intent Popup -->
+		<ExitIntentPopup />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
