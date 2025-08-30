@@ -99,7 +99,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="relative bg-gradient-to-br from-wajom-500 via-wajom-600 to-green-600 p-12 rounded-3xl text-center overflow-hidden shadow-2xl">
+		<div class="relative bg-gradient-to-br from-wajom-500 via-wajom-600 to-green-600 px-5 p-12 rounded-3xl text-center overflow-hidden shadow-2xl">
 			<!-- Background Pattern -->
 			<div class="absolute inset-0 opacity-10">
 				<svg class="w-full h-full" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -140,22 +140,31 @@
 				
 				<!-- Enhanced CTA Button -->
 				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-					<a href="https://portal.wajom.co/checkout" 
-					   class="group relative inline-flex items-center px-8 py-4 bg-white text-wajom-600 font-black text-lg rounded-2xl shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 overflow-hidden">
+						<a href="https://portal.wajom.co/checkout" 
+					   class="group relative inline-flex items-center px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-6 bg-gradient-to-r from-wajom-500 to-wajom-600 text-white font-bold text-base sm:text-lg md:text-xl rounded-2xl sm:rounded-3xl shadow-2xl hover:shadow-wajom-500/50 transition-all duration-500 transform hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2 overflow-hidden border-2 border-wajom-400 w-full sm:w-auto max-w-sm sm:max-w-none">
 						<!-- Button Background Animation -->
-						<div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+						<div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-0 group-hover:opacity-90 transition-opacity duration-500"></div>
+						
+						<!-- Pulse Ring Effect -->
+						<div class="absolute inset-0 rounded-3xl bg-wajom-400 opacity-30 group-hover:animate-ping"></div>
 						
 						<!-- Button Content -->
-						<div class="relative z-10 flex items-center">
-							<span class="mr-3 text-2xl group-hover:animate-bounce">🚀</span>
-							<span class="group-hover:text-white transition-colors duration-300">Yes! Saya Nak Transform Bisnes Sekarang!</span>
-							<svg class="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+						<div class="relative z-20 flex items-center justify-center text-center">
+							<span class="mr-2 sm:mr-3 md:mr-4 text-xl sm:text-2xl md:text-3xl group-hover:animate-bounce filter drop-shadow-lg">🚀</span>
+							<span class="font-extrabold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl group-hover:text-white transition-colors duration-300 tracking-wide leading-tight">
+								<span class="block sm:inline">Yes! Saya Nak Transform</span>
+								<span class="block sm:inline">Bisnes Sekarang!</span>
+							</span>
+							<svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 ml-2 sm:ml-3 md:ml-4 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300 group-hover:text-white filter drop-shadow-lg flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
 							</svg>
 						</div>
 						
-						<!-- Shine Effect -->
-						<div class="absolute inset-0 -top-2 -left-2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-shine"></div>
+						<!-- Enhanced Shine Effect -->
+						<div class="absolute inset-0 -top-3 -left-3 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 group-hover:animate-shine opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+						
+						<!-- Glow Effect -->
+						<div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-wajom-400 to-wajom-500 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 -z-10"></div>
 					</a>
 					
 		 
