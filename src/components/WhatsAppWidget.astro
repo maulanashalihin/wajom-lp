@@ -105,9 +105,9 @@
 	let chatPreviewTimeout: NodeJS.Timeout;
 	
 	// Show chat preview after 3 seconds
-	setTimeout(() => {
-		showChatPreview();
-	}, 3000);
+	// setTimeout(() => {
+	// 	showChatPreview();
+	// }, 3000);
 	
 	// Auto hide after 10 seconds
 	chatPreviewTimeout = setTimeout(() => {
@@ -130,6 +130,9 @@
 		}
 		clearTimeout(chatPreviewTimeout);
 	}
+	
+	// Make closeChatPreview globally accessible
+	(window as any).closeChatPreview = closeChatPreview;
 	
 	// Show preview on hover
 	document.getElementById('whatsapp-btn')?.addEventListener('mouseenter', () => {
