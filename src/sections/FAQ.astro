@@ -83,78 +83,69 @@
 						answer: '📈 Wajom menyokong unlimited prospek untuk semua plan. Tiada had untuk pertumbuhan perniagaan anda.',
 						subtext: 'Grow tanpa batasan dengan Wajom'
 					}
-				].map((faq, index) => {
-					// Define color classes explicitly to ensure they're included in production build
-					const colorClasses = {
-						blue: {
-							iconBg: 'bg-gradient-to-br from-blue-500 to-blue-600',
-							chevronBg: 'bg-gradient-to-br from-blue-100 to-blue-200',
-							contentBg: 'bg-gradient-to-r from-blue-50 to-gray-50',
-							textColor: 'text-blue-600'
-						},
-						green: {
-							iconBg: 'bg-gradient-to-br from-green-500 to-green-600',
-							chevronBg: 'bg-gradient-to-br from-green-100 to-green-200',
-							contentBg: 'bg-gradient-to-r from-green-50 to-gray-50',
-							textColor: 'text-green-600'
-						},
-						purple: {
-							iconBg: 'bg-gradient-to-br from-purple-500 to-purple-600',
-							chevronBg: 'bg-gradient-to-br from-purple-100 to-purple-200',
-							contentBg: 'bg-gradient-to-r from-purple-50 to-gray-50',
-							textColor: 'text-purple-600'
-						},
-						orange: {
-							iconBg: 'bg-gradient-to-br from-orange-500 to-orange-600',
-							chevronBg: 'bg-gradient-to-br from-orange-100 to-orange-200',
-							contentBg: 'bg-gradient-to-r from-orange-50 to-gray-50',
-							textColor: 'text-orange-600'
-						},
-						indigo: {
-							iconBg: 'bg-gradient-to-br from-indigo-500 to-indigo-600',
-							chevronBg: 'bg-gradient-to-br from-indigo-100 to-indigo-200',
-							contentBg: 'bg-gradient-to-r from-indigo-50 to-gray-50',
-							textColor: 'text-indigo-600'
-						}
-					};
-					
-					const currentColors = colorClasses[faq.color] || colorClasses.blue;
-					
-					return (
-						<div class="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-200/50 hover:shadow-xl transition-all duration-300">
-							<button class="faq-button w-full text-left p-4 md:p-6 focus:outline-none focus:bg-gray-50/50">
-								<div class="flex items-center gap-3 md:gap-4">
-									<div class={`w-10 h-10 md:w-12 md:h-12 ${currentColors.iconBg} rounded-xl flex items-center justify-center shadow-md flex-shrink-0`}>
-										<svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={faq.icon}></path>
-										</svg>
-									</div>
-									<h3 class="text-lg md:text-xl font-bold text-gray-900 flex-1 pr-4">
-										{faq.question}
-									</h3>
-									<div class={`${currentColors.chevronBg} rounded-full p-2 md:p-3 flex-shrink-0`}>
-										<svg class="w-4 h-4 md:w-5 md:h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-										</svg>
-									</div>
+				].map((faq, index) => (
+					<div class="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-200/50 hover:shadow-xl transition-all duration-300">
+						<button class="faq-button w-full text-left p-4 md:p-6 focus:outline-none focus:bg-gray-50/50">
+							<div class="flex items-center gap-3 md:gap-4">
+								<div class={`w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 ${
+									faq.color === 'blue' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
+									faq.color === 'green' ? 'bg-gradient-to-br from-green-500 to-green-600' :
+									faq.color === 'purple' ? 'bg-gradient-to-br from-purple-500 to-purple-600' :
+									faq.color === 'orange' ? 'bg-gradient-to-br from-orange-500 to-orange-600' :
+									faq.color === 'indigo' ? 'bg-gradient-to-br from-indigo-500 to-indigo-600' :
+									'bg-gradient-to-br from-blue-500 to-blue-600'
+								}`}>
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={faq.icon}></path>
+									</svg>
 								</div>
-							</button>
-							<div class="hidden px-4 pb-4 md:px-6 md:pb-6">
-								<div class={`${currentColors.contentBg} rounded-xl p-4 md:p-5 ml-13 md:ml-16`}>
-									<p class="text-gray-700 text-base md:text-lg font-medium mb-3">
-										<strong>{faq.answer}</strong>
-									</p>
-									<div class={`flex items-center ${currentColors.textColor} font-semibold text-sm md:text-base`}>
-										<svg class="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-										</svg>
-										{faq.subtext}
-									</div>
+								<h3 class="text-lg md:text-xl font-bold text-gray-900 flex-1 pr-4">
+									{faq.question}
+								</h3>
+								<div class={`rounded-full p-2 md:p-3 flex-shrink-0 ${
+									faq.color === 'blue' ? 'bg-gradient-to-br from-blue-100 to-blue-200' :
+									faq.color === 'green' ? 'bg-gradient-to-br from-green-100 to-green-200' :
+									faq.color === 'purple' ? 'bg-gradient-to-br from-purple-100 to-purple-200' :
+									faq.color === 'orange' ? 'bg-gradient-to-br from-orange-100 to-orange-200' :
+									faq.color === 'indigo' ? 'bg-gradient-to-br from-indigo-100 to-indigo-200' :
+									'bg-gradient-to-br from-blue-100 to-blue-200'
+								}`}>
+									<svg class="w-4 h-4 md:w-5 md:h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+									</svg>
+								</div>
+							</div>
+						</button>
+						<div class="hidden px-4 pb-4 md:px-6 md:pb-6">
+							<div class={`rounded-xl p-4 md:p-5 ml-13 md:ml-16 ${
+								faq.color === 'blue' ? 'bg-gradient-to-r from-blue-50 to-gray-50' :
+								faq.color === 'green' ? 'bg-gradient-to-r from-green-50 to-gray-50' :
+								faq.color === 'purple' ? 'bg-gradient-to-r from-purple-50 to-gray-50' :
+								faq.color === 'orange' ? 'bg-gradient-to-r from-orange-50 to-gray-50' :
+								faq.color === 'indigo' ? 'bg-gradient-to-r from-indigo-50 to-gray-50' :
+								'bg-gradient-to-r from-blue-50 to-gray-50'
+							}`}>
+								<p class="text-gray-700 text-base md:text-lg font-medium mb-3">
+									<strong>{faq.answer}</strong>
+								</p>
+								<div class={`flex items-center font-semibold text-sm md:text-base ${
+									faq.color === 'blue' ? 'text-blue-600' :
+									faq.color === 'green' ? 'text-green-600' :
+									faq.color === 'purple' ? 'text-purple-600' :
+									faq.color === 'orange' ? 'text-orange-600' :
+									faq.color === 'indigo' ? 'text-indigo-600' :
+									'text-blue-600'
+								}`}>
+									<svg class="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									{faq.subtext}
 								</div>
 							</div>
 						</div>
-					);
-				})}
+					</div>
+				))}
+			</div>
 			</div>
 		
 		<!-- CTA Section -->
