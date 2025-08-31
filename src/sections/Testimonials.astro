@@ -42,15 +42,15 @@
 					<span class="text-gray-600 font-medium">5.0/5</span>
 				</div>
 				<blockquote class="text-gray-700 text-lg mb-8 leading-relaxed font-medium space-y-4">
-					<p>"Alhamdulillah Wajom sangat menjimatkan masa saya. Dulu untuk follow up 200 leads ambil masa hampir sejam."</p>
+					<p>"Alhamdulillah Wajom sangat menjimatkan masa Kak Lila. Dulu untuk follow up 200 leads ambil masa hampir sejam."</p>
 					
-					<p><span class="font-bold text-wajom-600">Sekarang leads masuk auto dari Google Form, terus auto follow up & auto respon by AI.</span> Saya hanya takeover bila prospek buat pembayaran. MasyaAllah dengan belian Wajom yang sangat murah untuk 5 device setahun memang sangat menguntungkan & mampu milik untuk ahli baru juga!"</p>
+					<p><span class="font-bold text-wajom-600">Sekarang leads masuk auto dari Google Form, terus auto follow up & auto respon by AI.</span> Kak Lila hanya takeover bila prospek buat pembayaran. MasyaAllah dengan belian Wajom yang sangat murah untuk 5 device setahun memang sangat menguntungkan & mampu milik untuk ahli baru juga!"</p>
 				</blockquote>
 				 
 				
 				<div class="flex items-center">
 					<div class="relative">
-						<img src="/kaklila.png" class="w-16 h-16 rounded-2xl mr-4 shadow-lg object-cover" alt="Testimonial avatar" />
+						<img src="/kaklila.png" class="w-16 h-16 rounded-2xl mr-4 shadow-lg object-cover cursor-pointer hover:scale-105 transition-transform duration-300" alt="Lila Maskhon" onclick="openImageModal('/kaklila.png', 'Lila Maskhon')" />
 						<div class="absolute -bottom-1 -left-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
 							<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -92,7 +92,7 @@
 				
 				<div class="flex items-center">
 					<div class="relative">
-						<img src="/kakaira.png" alt="Aira Halim" class="w-16 h-16 rounded-2xl object-cover mr-4 shadow-lg" />
+						<img src="/kakaira.png" alt="Aira Halim" class="w-16 h-16 rounded-2xl object-cover mr-4 shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" onclick="openImageModal('/kakaira.png', 'Aira Halim')" />
 							<div class="absolute -bottom-1 -left-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
 							<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -158,3 +158,64 @@
 		</div>
 	</div>
 </section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
+	<div class="relative max-w-4xl max-h-[90vh] mx-4">
+		<button onclick="closeImageModal()" class="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors duration-200 z-10">
+			<svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+		<img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl" />
+		<div id="modalCaption" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-6 rounded-b-2xl">
+			<p class="text-lg font-semibold text-center"></p>
+		</div>
+	</div>
+</div>
+
+<script is:inline>
+	function openImageModal(imageSrc, caption) {
+		const modal = document.getElementById('imageModal');
+		const modalImage = document.getElementById('modalImage');
+		const modalCaption = document.getElementById('modalCaption')?.querySelector('p');
+		
+		if (!modal || !modalImage || !modalCaption) return;
+		
+		modalImage.src = imageSrc;
+		modalImage.alt = caption;
+		modalCaption.textContent = caption;
+		
+		modal.classList.remove('hidden');
+		setTimeout(() => {
+			modal.classList.remove('opacity-0');
+			modal.classList.add('opacity-100');
+		}, 10);
+		
+		// Close modal when clicking outside the image
+		modal.onclick = function(event) {
+			if (event.target === modal) {
+				closeImageModal();
+			}
+		};
+		
+		// Close modal with Escape key
+		document.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape') {
+				closeImageModal();
+			}
+		});
+	}
+	
+	function closeImageModal() {
+		const modal = document.getElementById('imageModal');
+		if (!modal) return;
+		
+		modal.classList.remove('opacity-100');
+		modal.classList.add('opacity-0');
+		
+		setTimeout(() => {
+			modal.classList.add('hidden');
+		}, 300);
+	}
+</script>

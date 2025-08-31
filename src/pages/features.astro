@@ -12,17 +12,17 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Dashboard Header -->
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-2">Dashboard WhatsApp</h2>
-        <p class="text-gray-600 mb-6">Kelola dan akses semua ciri WhatsApp anda di satu tempat</p>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Dashboard Wajom!</h2>
+        <p class="text-gray-600 mb-6">Uruskan kempen, follow-up, Chat Ai dan akses semua feature Wajom di satu tempat</p>
         
         <!-- Search Section -->
         <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Mahu automasi apa hari ini?</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Jom pilih automasi anda hari ini.</h3>
           <div class="relative">
             <input 
               id="searchInput"
               type="text" 
-              placeholder="Cari ciri yang anda inginkan" 
+              placeholder="Cari feature yang anda impikan" 
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <div class="absolute right-3 top-3">
@@ -36,10 +36,11 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 mb-8" id="filterTabs">
           <button class="filter-tab px-4 py-2 bg-blue-500 text-white rounded-lg font-medium transition-all" data-filter="all">Semua</button>
-          <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="ai">AI & Lanjutan</button>
+          <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="ai">Chat AI</button>
           <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="automasi">Automasi</button>
           <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="kempen">Kempen</button>
           <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="pengurusan">Pengurusan</button>
+          <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="integration">Integration</button>
           <button class="filter-tab px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all" data-filter="keselamatan">Keselamatan & Perlindungan</button>
         </div>
       </div>
@@ -54,7 +55,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Add Contact</h3>
-          <p class="text-gray-600 text-sm mb-4">Tambahkan kenalan baru ke senarai</p>
+          <p class="text-gray-600 text-sm mb-4">Tambah no telefon prospek & team dan save dalam specific "List". Boleh pilih untuk tambah secara manual (copy & paste) atau dari file CSV, Google Form, Webhook, Tap Site, Elementor</p>
 
         </div>
 
@@ -66,7 +67,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Campaign</h3>
-          <p class="text-gray-600 text-sm mb-4">Buat dan kelola kempen WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Boleh hantar copywriting, gambar, video, audio ke nombor personal @ group whatsapp</p>
         </div>
 
         <!-- List -->
@@ -77,7 +78,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">List</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola senarai kenalan anda</p>
+          <p class="text-gray-600 text-sm mb-4">Asingkan senarai stranger, prospek, anak team, customer & no telefon yang kita dah block</p>
         </div>
 
         <!-- Bot -->
@@ -88,7 +89,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Bot</h3>
-          <p class="text-gray-600 text-sm mb-4">Buat bot automatik untuk WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Robot automatik yang bekerja 24/7 tanpa cuti menjawab semua soalan prospek & team</p>
         </div>
 
         <!-- Chat AI -->
@@ -99,7 +100,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Chat AI</h3>
-          <p class="text-gray-600 text-sm mb-4">Gunakan AI untuk perbualan WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Jawab semua soalan prospek ikut arahan dari Prompt yang kita buat. Tidak akan berputus asa, sentiasa sabar & cakap baik-baik penuh empati melayan kerenah prospek sampai close sales ribu-ribu</p>
         </div>
 
         <!-- Evergreen Campaign -->
@@ -110,7 +111,13 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Evergreen Campaign</h3>
-          <p class="text-gray-600 text-sm mb-4">Kempen automatik yang sentiasa aktif</p>
+          <p class="text-gray-600 text-sm mb-4">
+            Secara automatik menghantar banyak siri content follow-up.
+            <br><br>
+            Contohnya: Prospek/ Anak team/ Customer terima mesej selama 30 hari tanpa perlu setting setiap hari
+            <br><br>
+            Tidak limit setakat 30 hari sahaja. unlimited hantar content ke nombor personal & group WhatsApp.
+          </p>
         </div>
 
         <!-- Loop Message -->
@@ -121,7 +128,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Loop Message</h3>
-          <p class="text-gray-600 text-sm mb-4">Hantar mesej berulang secara terjadual</p>
+          <p class="text-gray-600 text-sm mb-4">Schedule post ke group WhatsApp @ secara personal. Boleh setting untuk post setiap jam/ hari/ minggu/ bulan/ tahun</p>
         </div>
 
         <!-- Daily Leads -->
@@ -132,7 +139,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Daily Leads</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola leads harian anda</p>
+          <p class="text-gray-600 text-sm mb-4">Simpan semua leads yang masuk setiap hari secara automatik</p>
         </div>
 
         <!-- OTP Widget -->
@@ -143,7 +150,11 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">OTP Widget</h3>
-          <p class="text-gray-600 text-sm mb-4">OTP satu-klik dengan Wajom!</p>
+          <p class="text-gray-600 text-sm mb-4">One Time Password. Memudahkan proses pengesahan identiti pengguna menggunakan.</p>
+
+          <p class="text-gray-600 text-sm mb-4">Contoh: Kawal akses masuk ke learning portal/ Telegram/ Website khas. Nak akses kena masukkan OTP dulu.</p>
+
+          <p class="text-gray-600 text-sm mb-4">Sistem Wajom secara Automatik buatkan OTP yang berbeza untuk user yang berbeza.</p>
         </div>
 
         <!-- Grab Group -->
@@ -154,18 +165,18 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Grab Group</h3>
-          <p class="text-gray-600 text-sm mb-4">Ambil data dari kumpulan WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Sedut no telefon dari semua group whatsapp yang sudah kita join</p>
         </div>
 
         <!-- Integration -->
-        <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="automasi" data-keywords="integrasi integration platform api webhook">
+        <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="integration" data-keywords="integrasi integration platform api webhook google form tapsite elementor">
           <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Integration</h3>
-          <p class="text-gray-600 text-sm mb-4">Integrasi dengan pelbagai platform</p>
+          <p class="text-gray-600 text-sm mb-4">Wajom! boleh diintegrasikan dengan pelbagai aplikasi pihak ketiga seperti Google Forms, Webhook, Tapsite, dan Elementor <br><br>Sistem Wajom akan terus menghantar mesej aluan & berkongsi pautan Kolam prospek</p>
         </div>
 
         <!-- Bot Form -->
@@ -176,7 +187,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Bot Form</h3>
-          <p class="text-gray-600 text-sm mb-4">Pembina borang untuk bot WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Tanya beberapa soalan kepada prospek. Sistem Wajom simpan jawapan dalam Wajom & boleh import ke file CSV</p>
         </div>
 
         <!-- Move/Copy List -->
@@ -187,31 +198,12 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Move/Copy List</h3>
-          <p class="text-gray-600 text-sm mb-4">Pindahkan atau salin kenalan antara senarai</p>
+          <p class="text-gray-600 text-sm mb-4">Dengan cepat boleh Copy beratus nombor Telefon Dari excell Dan terus paste masuk dalam "List" wajom
+<br><br>
+Siap dalam Masa kurang 10 saat!</p>
         </div>
 
-        <!-- Custom Label -->
-        <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="pengurusan" data-keywords="label tersuai custom tag organize">
-          <div class="w-12 h-12 bg-lime-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Custom Label</h3>
-          <p class="text-gray-600 text-sm mb-4">Atur label tersuai untuk WhatsApp anda</p>
-        </div>
-
-        <!-- Groups -->
-        <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="pengurusan" data-keywords="kumpulan groups kelola manage whatsapp">
-          <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Group</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola kumpulan WhatsApp anda</p>
-        </div>
-
+       
         <!-- Queue -->
         <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="automasi" data-keywords="barisan queue mesej antrian schedule">
           <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
@@ -220,7 +212,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Queue</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola barisan mesej WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Lihat status kempen yang sudah dijadualkan. Sent, failed, waiting, pending</p>
         </div>
 
         <!-- Sequencer -->
@@ -231,7 +223,11 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Sequencer</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola urutan auto-increment untuk mesej bot anda</p>
+          <p class="text-gray-600 text-sm mb-4">Sequencer Wajom Secara automatik membuat nombor bersiri. Boleh digunakan untuk pendaftaran keahlian lalu menghasilkan No ahli yang berbeza kepada setiap ahli. Juga membuat no invois untuk setiap pelanggan dan banyak lagi kegunaan
+<br><br>
+Contoh: No ahli Ahmad 600 900 002 455. Sarah 600 900 002 456. Wilson 600 900 002 457
+<br><br>
+Customer A dapat invois INV-202508001, B dapat invois INV-202508002 dan seterusnya</p>
         </div>
 
         <!-- Spam Limiter -->
@@ -242,7 +238,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Spam Limiter</h3>
-          <p class="text-gray-600 text-sm mb-4">Batasi kekerapan mesej untuk mencegah spam</p>
+          <p class="text-gray-600 text-sm mb-4">Mencegah no whatsapp dari di banned dengan cara menghad & mengawal kekerapan 1 nombor whatsapp menghantar mesej</p>
         </div>
 
         <!-- Working Time Control -->
@@ -253,7 +249,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Working Time Control</h3>
-          <p class="text-gray-600 text-sm mb-4">Kawal jam kerja untuk mesej automatik</p>
+          <p class="text-gray-600 text-sm mb-4">Menghadkan chat bot Wajom bekerja. E.g. bot tidak akan reply apa-apa keyword semasa manusia sepatutnya tidur. Ini salah satu feature untuk elak no whatsapp yang kita sayangi dari kena banned</p>
         </div>
 
         <!-- WhatsApp Training Circle -->
@@ -264,7 +260,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">WhatsApp Training Circle</h3>
-          <p class="text-gray-600 text-sm mb-4">Latih nombor WhatsApp anda untuk mengurangkan kemungkinan disekat</p>
+          <p class="text-gray-600 text-sm mb-4">Fungsi warm up paling cool di dunia! Tak payah link nombor whatsapp dengan Wajom tapi boleh warm up. Unlimited nombor boleh warm up. Content warm-up bakal buat anda senyum bahagia.</p>
         </div>
 
         <!-- Instance Info -->
@@ -275,7 +271,9 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Instance Info</h3>
-          <p class="text-gray-600 text-sm mb-4">Lihat maklumat instance WhatsApp anda</p>
+          <p class="text-gray-600 text-sm mb-4">Paparan yang menunjukkan summary instance nombor whatsapp anda termasuklah aktiviti login, logout no whatsapp
+<br><br>
+"instance ~ Semua feature yang telah di berikan kepada setiap akaun whatsapp di dalam sistem Wajom"</p>
         </div>
 
         <!-- Human Handover -->
@@ -289,17 +287,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
           <p class="text-gray-600 text-sm mb-4">Alihkan perbualan dari bot ke ejen manusia</p>
         </div>
 
-        <!-- CS AI -->
-        <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="ai" data-keywords="cs ai customer service perkhidmatan pelanggan">
-          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">CS AI</h3>
-          <p class="text-gray-600 text-sm mb-4">AI untuk perkhidmatan pelanggan automatik</p>
-        </div>
-
+ 
         <!-- AI Add to List -->
         <div class="feature-card bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow" data-category="ai" data-keywords="ai tambah senarai automatik kenalan">
           <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
@@ -308,7 +296,9 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Add to List</h3>
-          <p class="text-gray-600 text-sm mb-4">Tambahkan kenalan ke senarai secara automatik dengan AI</p>
+          <p class="text-gray-600 text-sm mb-4">Ketika ada prospek mesej kita tanpa mengisi form dan terus mesej ke nombor Chat Ai... Sistem Wajom akan terus save nombor telefon ke dalam list
+<br><br>
+Jadi... Kita boleh arahkan sistem Wajom untuk hantar auto follow up sampai close</p>
         </div>
 
         <!-- AI Daily Leads -->
@@ -319,7 +309,7 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Daily Leads</h3>
-          <p class="text-gray-600 text-sm mb-4">Dapatkan leads baru setiap hari dengan bantuan AI</p>
+          <p class="text-gray-600 text-sm mb-4">Setiap hari Rekod semua leads baru yang mesej no Chat Ai kita</p>
         </div>
 
         <!-- Share Owner -->
@@ -330,7 +320,86 @@ export const prerender = true; // agar halaman ini diprerender (jika static site
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Share Owner</h3>
-          <p class="text-gray-600 text-sm mb-4">Kelola pemilikan dan kongsi akses WhatsApp</p>
+          <p class="text-gray-600 text-sm mb-4">Berikan full akses @ aksess tertentu kepada user lain. Tak perlu kongsi username & password untuk berikan aksess kepada user lain
+<br><br>
+User yang dapat akses boleh edit atau boleh sekadar view sahaja</p>
+        </div>
+      </div>
+
+      <!-- Strong CTA Section -->
+      <div class="mt-16 mb-8">
+        <div class="bg-gradient-to-r from-wajom-500 via-wajom-600 to-green-600 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+          <!-- Background Pattern -->
+          <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full">
+              <div class="grid grid-cols-8 gap-4 transform rotate-12 scale-150">
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.1s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.3s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.5s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.6s"></div>
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.7s"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <div class="relative z-10">
+            <div class="mb-6">
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Siap untuk <span class="text-yellow-300">Revolusi</span> WhatsApp Anda?
+              </h2>
+              <p class="text-xl md:text-2xl text-green-100 mb-2">
+                Lebih dari 50+ fitur canggih menanti Anda!
+              </p>
+              <p class="text-lg text-green-200 max-w-3xl mx-auto">
+                Automasi WhatsApp, Chat AI, Campaign Management, dan masih banyak lagi. 
+                Bergabunglah dengan ribuan bisnis yang sudah merasakan transformasi digital.
+              </p>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-2xl md:text-3xl font-bold text-yellow-300 mb-1">50+</div>
+                <div class="text-sm text-green-100">Fitur Canggih</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-2xl md:text-3xl font-bold text-yellow-300 mb-1">24/7</div>
+                <div class="text-sm text-green-100">Support AI</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div class="text-2xl md:text-3xl font-bold text-yellow-300 mb-1">∞</div>
+                <div class="text-sm text-green-100">Kemungkinan</div>
+              </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="space-y-4">
+              <a href="https://portal.wajom.co/checkout" 
+                 class="inline-flex items-center justify-center px-8 py-4 text-xl font-bold text-blue-900 bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 rounded-full hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 group">
+                <span class="mr-3">🚀</span>
+                MULA SEKARANG!
+                <svg class="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              
+              <div class="text-sm text-green-200">
+                ⚡ Setup dalam 5 minit • 💯 Jaminan kepuasan • 🔒 Data selamat
+              </div>
+            </div>
+            
+            <!-- Urgency Text -->
+            <div class="mt-6 p-4 bg-red-500/20 border border-red-400/30 rounded-lg">
+              <p class="text-red-100 font-semibold">
+                ⏰ <strong>Tawaran Terhad!</strong> Dapatkan akses ke semua fitur premium dengan harga istimewa. 
+                Jangan biarkan pesaing anda mendahului!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
  
