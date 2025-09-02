@@ -9,6 +9,7 @@ export interface Props {
   bgGradient: string;
   icon: string;
   categoryLabel: string;
+  pdfUrl?: string;
 }
 
 const { 
@@ -20,7 +21,8 @@ const {
   duration, 
   bgGradient, 
   icon,
-  categoryLabel 
+  categoryLabel,
+  pdfUrl
 } = Astro.props;
 ---
 
@@ -51,7 +53,13 @@ const {
         {duration}
       </span>
       <button class="text-wajom-600 hover:text-wajom-700 font-medium text-sm hover:underline">
-        Lihat PDF →
+        {pdfUrl ? (
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
+            Lihat PDF →
+          </a>
+        ) : (
+          "Coming Soon"
+        )}
       </button>
     </div>
   </div>
