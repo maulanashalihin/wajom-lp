@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../sections/Header.astro';
+import TutorialCard from '../components/TutorialCard.astro';
+export const prerender = true;
+---
+
+<Layout title="Tutorial - Wajom">
+  <Header />
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Page Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Tutorial <span class="text-wajom-600">Wajom!</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Pelajari cara menggunakan semua feature Wajom untuk meningkatkan produktiviti dan automasi WhatsApp anda
+        </p>
+      </div>
+
+      <!-- Search Section -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Cari Tutorial</h3>
+        <div class="relative">
+          <input 
+            id="searchInput"
+            type="text" 
+            placeholder="Cari tutorial yang anda perlukan..." 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-wajom-500 focus:border-transparent"
+          />
+          <div class="absolute right-3 top-3">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="flex flex-wrap gap-3 mb-8 justify-center">
+        <button class="category-btn active px-6 py-3 bg-wajom-500 text-white rounded-lg font-medium transition-all hover:bg-wajom-600" data-category="all">
+          Semua Tutorial
+        </button>
+        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="basic">
+          Tutorial Asas
+        </button>
+        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="advanced">
+          Tutorial Lanjutan
+        </button>
+        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="ai">
+          Tutorial AI Chat
+        </button>
+        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="campaign">
+          Tutorial Kempen
+        </button>
+      </div>
+
+      <!-- Tutorials Grid -->
+      <div id="tutorialsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <TutorialCard 
+          number="1"
+          title="Setup Awal Wajom"
+          description="Pelajari cara setup awal sistem Wajom, daftar akaun, dan konfigurasi asas untuk mula menggunakan platform automasi WhatsApp."
+          category="basic"
+          keywords="setup awal mula permulaan"
+          duration="15 minit"
+          bgGradient="from-blue-400 to-blue-600"
+          categoryLabel="Asas"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.168 18.477 18.582 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="2"
+          title="Menambah & Menguruskan Kenalan"
+          description="Tutorial lengkap untuk menambah kenalan, membuat list, import dari CSV, dan mengurus database kenalan dengan berkesan."
+          category="basic"
+          keywords="menambah kenalan contact list senarai"
+          duration="20 minit"
+          bgGradient="from-green-400 to-green-600"
+          categoryLabel="Asas"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="3"
+          title="Membuat Kempen Pertama"
+          description="Panduan step-by-step untuk membuat kempen broadcast WhatsApp yang berkesan, termasuk tips copywriting dan timing."
+          category="campaign"
+          keywords="kempen campaign broadcast marketing"
+          duration="25 minit"
+          bgGradient="from-purple-400 to-purple-600"
+          categoryLabel="Kempen"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="4"
+          title="Setup Bot Automatik"
+          description="Pelajari cara membuat bot automatik yang boleh menjawab soalan pelanggan 24/7 dengan keyword dan response yang berkesan."
+          category="basic"
+          keywords="bot automation chatbot automatik"
+          duration="30 minit"
+          bgGradient="from-orange-400 to-orange-600"
+          categoryLabel="Asas"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="5"
+          title="Konfigurasi AI Chat"
+          description="Tutorial lanjutan untuk setup AI Chat yang pintar, membuat prompt yang berkesan, dan mengoptimumkan respons AI untuk sales."
+          category="ai"
+          keywords="ai chat artificial intelligence perbualan"
+          duration="35 minit"
+          bgGradient="from-indigo-400 to-indigo-600"
+          categoryLabel="AI"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="6"
+          title="Evergreen Campaign & Drip Sequence"
+          description="Master teknik evergreen campaign dan drip sequence untuk follow-up automatik yang berterusan dan berkesan dalam jangka panjang."
+          category="advanced"
+          keywords="evergreen drip follow-up automation lanjutan"
+          duration="40 minit"
+          bgGradient="from-emerald-400 to-emerald-600"
+          categoryLabel="Lanjutan"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="7"
+          title="Integration dengan Platform Lain"
+          description="Panduan lengkap untuk mengintegrasikan Wajom dengan Google Forms, Webhook, Tapsite, Elementor, dan platform lain."
+          category="advanced"
+          keywords="integration api webhook tapsite elementor"
+          duration="45 minit"
+          bgGradient="from-cyan-400 to-cyan-600"
+          categoryLabel="Lanjutan"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="8"
+          title="Analytics & Pelaporan"
+          description="Pelajari cara membaca dan menganalisis data dari kempen, memahami metrics penting, dan membuat laporan yang bermakna."
+          category="advanced"
+          keywords="analytics laporan report data statistics"
+          duration="30 minit"
+          bgGradient="from-pink-400 to-pink-600"
+          categoryLabel="Lanjutan"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>`}
+        />
+
+        <TutorialCard 
+          number="9"
+          title="Troubleshooting & Tips Berguna"
+          description="Panduan menyelesaikan masalah biasa, tips optimisasi, dan best practices untuk memaksimumkan penggunaan Wajom."
+          category="basic"
+          keywords="troubleshoot masalah penyelesaian tips trick"
+          duration="25 minit"
+          bgGradient="from-red-400 to-red-600"
+          categoryLabel="Asas"
+          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"></path>
+                </svg>`}
+        />
+
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="bg-gradient-to-r from-wajom-500 to-wajom-600 rounded-2xl p-8 mt-16 text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">Mahu Bantuan Peribadi?</h2>
+        <p class="text-xl mb-6 opacity-90">
+          Jika anda perlukan bantuan tambahan atau tutorial khusus, jangan segan untuk hubungi support team kami
+        </p>
+        <a 
+          href="https://wa.me/60108102455?text=Hi%20saya%20perlukan%20bantuan%20tutorial%20Wajom" 
+          target="_blank"
+          class="inline-flex items-center px-8 py-4 bg-white text-wajom-600 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+        >
+          <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+          </svg>
+          Hubungi Support WhatsApp
+        </a>
+      </div>
+
+    </main>
+  </div>
+</Layout>
+
+<script>
+  // Search functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const tutorialCards = document.querySelectorAll('.tutorial-card');
+    
+    let currentCategory = 'all';
+    
+    // Search function
+    function filterTutorials() {
+      const searchTerm = searchInput.value.toLowerCase();
+      
+      tutorialCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const keywords = card.getAttribute('data-keywords').toLowerCase();
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        
+        const matchesCategory = currentCategory === 'all' || category === currentCategory;
+        const matchesSearch = searchTerm === '' || 
+          keywords.includes(searchTerm) || 
+          title.includes(searchTerm) || 
+          description.includes(searchTerm);
+        
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    
+    // Search input event
+    searchInput.addEventListener('input', filterTutorials);
+    
+    // Category filter events
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Update active button
+        categoryBtns.forEach(b => {
+          b.classList.remove('active', 'bg-wajom-500', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        });
+        
+        this.classList.add('active', 'bg-wajom-500', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        
+        // Update current category and filter
+        currentCategory = this.getAttribute('data-category');
+        filterTutorials();
+      });
+    });
+  });
+</script>
