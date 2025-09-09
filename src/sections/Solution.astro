@@ -32,7 +32,103 @@
 		</div>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
 			<a href="#cara-kerja" class="bg-gradient-to-r from-wajom-600 to-wajom-800 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-wajom-700 hover:to-wajom-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Ketahui Bagaimana Ia Berfungsi</a>
-			<button class="bg-white text-gray-800 border-2 border-wajom-300 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-wajom-50 hover:border-wajom-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Lihat Demo</button>
+			<button id="demo-button" class="bg-white text-gray-800 border-2 border-wajom-300 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-wajom-50 hover:border-wajom-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Lihat Demo</button>
 		</div>
 	</div>
 </section>
+
+<!-- Modal Popup untuk Video Demo -->
+<div id="demo-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center p-4">
+	<div class="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
+		<!-- Header Modal -->
+		<div class="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-wajom-50 to-wajom-100">
+			<h3 class="text-2xl font-bold text-gray-900">Demo Wajom - Sistem Automasi WhatsApp</h3>
+			<button id="close-modal" class="text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full p-2 transition-all duration-200 transform hover:scale-110">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
+
+		<!-- Video Container -->
+		<div class="relative w-full" style="padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+			<iframe
+				id="youtube-video"
+				class="absolute top-0 left-0 w-full h-full"
+				src=""
+				title="Demo Wajom - Sistem Automasi WhatsApp"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen>
+			</iframe>
+		</div>
+
+		<!-- Footer Modal -->
+		<div class="p-6 bg-gray-50 border-t border-gray-200">
+			<p class="text-gray-600 text-center">
+				Lihat bagaimana Wajom dapat mengautomasi WhatsApp anda untuk meningkatkan produktiviti dan hasil bisnes.
+			</p>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const demoButton = document.getElementById('demo-button');
+			const modal = document.getElementById('demo-modal');
+			const modalContent = document.getElementById('modal-content');
+			const closeButton = document.getElementById('close-modal');
+			const youtubeVideo = document.getElementById('youtube-video');
+
+			// URL video YouTube yang akan di-embed
+			const videoUrl = 'https://www.youtube.com/embed/8HbZVTGdzyc?autoplay=1&rel=0&modestbranding=1';
+
+			// Fungsi untuk membuka modal
+			function openModal() {
+				modal.classList.remove('hidden');
+				// Set video URL ketika modal dibuka
+				youtubeVideo.src = videoUrl;
+
+				// Animasi masuk
+				setTimeout(() => {
+					modalContent.classList.remove('scale-95', 'opacity-0');
+					modalContent.classList.add('scale-100', 'opacity-100');
+				}, 10);
+
+				// Prevent body scroll
+				document.body.style.overflow = 'hidden';
+			}
+
+			// Fungsi untuk menutup modal
+			function closeModal() {
+				// Animasi keluar
+				modalContent.classList.remove('scale-100', 'opacity-100');
+				modalContent.classList.add('scale-95', 'opacity-0');
+
+				setTimeout(() => {
+					modal.classList.add('hidden');
+					// Stop video dengan menghapus src
+					youtubeVideo.src = '';
+					// Restore body scroll
+					document.body.style.overflow = '';
+				}, 300);
+			}
+
+			// Event listeners
+			demoButton.addEventListener('click', openModal);
+			closeButton.addEventListener('click', closeModal);
+
+			// Tutup modal ketika klik di luar area modal
+			modal.addEventListener('click', function(e) {
+				if (e.target === modal) {
+					closeModal();
+				}
+			});
+
+			// Tutup modal dengan tombol Escape
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+					closeModal();
+				}
+			});
+		});
+	</script>
