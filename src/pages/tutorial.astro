@@ -2,6 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../sections/Header.astro';
 import TutorialCard from '../components/TutorialCard.astro';
+import { getCollection } from 'astro:content';
+
+// Get all tutorials from content collection
+const tutorials = await getCollection('tutorials');
+
+// Sort tutorials by number
+const sortedTutorials = tutorials.sort((a, b) => {
+  const numA = parseFloat(a.data.number);
+  const numB = parseFloat(b.data.number);
+  return numA - numB;
+});
+
+// Get unique categories for filter buttons
+const categories = [...new Set(tutorials.map(tutorial => tutorial.data.category))];
+
 export const prerender = true;
 ---
 
@@ -44,47 +59,42 @@ export const prerender = true;
         <button class="category-btn active px-6 py-3 bg-wajom-500 text-white rounded-lg font-medium transition-all hover:bg-wajom-600" data-category="all">
           Semua Tutorial
         </button>
-        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="basic">
-          Tutorial Asas
-        </button>
-        <button class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all" data-category="warmup">
-          Warm Up
-        </button>
+        {categories.map(category => {
+          const categoryLabels = {
+            'basic': 'Tutorial Asas',
+            'warmup': 'Warm Up',
+            'campaign': 'Campaign',
+            'advanced': 'Advanced',
+            'analytics': 'Analytics'
+          };
+
+          return (
+            <button
+              class="category-btn px-6 py-3 bg-white text-gray-700 rounded-lg font-medium hover:bg-gray-50 border border-gray-200 transition-all"
+              data-category={category}
+            >
+              {categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          );
+        })}
       </div>
 
       <!-- Tutorials Grid -->
       <div id="tutorialsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        
-        <TutorialCard 
-          number="1-2"
-          title="Cara Buat Akun Baru & Menghubungkan WhatsApp"
-          description="Tutorial lengkap untuk membuat akun Wajom baru dan menghubungkan nomor WhatsApp dengan sistem Wajom untuk memulai automasi."
-          category="basic"
-          keywords="buat akun daftar hubungkan whatsapp setup"
-          duration="25 minit"
-          bgGradient="from-blue-400 to-blue-600"
-          categoryLabel="Asas"
-          pdfUrl="/tutorials/tutorial-1-2.pdf"
-          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                </svg>`}
-        />
-
-        <TutorialCard 
-          number="3"
-          title="Cara Warm Up Nombor WhatsApp"
-          description="Panduan penting untuk melakukan warm up nomor WhatsApp agar tidak kena banned dan memastikan delivery rate yang optimal untuk kampanye."
-          category="warmup"
-          keywords="warm up whatsapp nomor delivery rate banned"
-          duration="20 minit"
-          bgGradient="from-green-400 to-green-600"
-          categoryLabel="Warm Up"
-          pdfUrl="/tutorials/tutorial-3.pdf"
-          icon={`<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                </svg>`}
-        />
-
+        {sortedTutorials.map(tutorial => (
+          <TutorialCard
+            number={tutorial.data.number}
+            title={tutorial.data.title}
+            description={tutorial.data.description}
+            category={tutorial.data.category}
+            keywords={tutorial.data.keywords}
+            duration={tutorial.data.duration}
+            bgGradient={tutorial.data.bgGradient}
+            categoryLabel={tutorial.data.categoryLabel}
+            slug={tutorial.slug}
+            icon={tutorial.data.icon}
+          />
+        ))}
       </div>
 
       <!-- Call to Action Section -->

@@ -9,19 +9,21 @@ export interface Props {
   bgGradient: string;
   icon: string;
   categoryLabel: string;
-  pdfUrl?: string;
+  slug?: string;
+  pdfUrl?: string; // Keep for backward compatibility
 }
 
-const { 
-  number, 
-  title, 
-  description, 
-  category, 
-  keywords, 
-  duration, 
-  bgGradient, 
+const {
+  number,
+  title,
+  description,
+  category,
+  keywords,
+  duration,
+  bgGradient,
   icon,
   categoryLabel,
+  slug,
   pdfUrl
 } = Astro.props;
 ---
@@ -52,15 +54,17 @@ const {
         </svg>
         {duration}
       </span>
-      <button class="text-wajom-600 hover:text-wajom-700 font-medium text-sm hover:underline">
-        {pdfUrl ? (
-          <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-            Lihat PDF →
-          </a>
-        ) : (
-          "Coming Soon"
-        )}
-      </button>
+      {slug ? (
+        <a href={`/tutorial/${slug}`} class="text-wajom-600 hover:text-wajom-700 font-medium text-sm hover:underline transition-colors">
+          Baca Tutorial →
+        </a>
+      ) : pdfUrl ? (
+        <a href={pdfUrl} target="_blank" rel="noopener noreferrer" class="text-wajom-600 hover:text-wajom-700 font-medium text-sm hover:underline transition-colors">
+          Lihat PDF →
+        </a>
+      ) : (
+        <span class="text-gray-400 font-medium text-sm">Coming Soon</span>
+      )}
     </div>
   </div>
 </div>
