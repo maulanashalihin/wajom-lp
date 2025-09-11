@@ -1,5 +1,5 @@
 ---
-title: "Cara cipta akaun FREE Trial Wajom"
+title: "Cara cipta akaun FREE trial Wajom"
 description: "Selamat mengenali & jatuh cinta dengan Wajom!"
 category: "basic"
 categoryLabel: "Asas"

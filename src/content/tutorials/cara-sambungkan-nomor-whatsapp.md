@@ -1,5 +1,5 @@
 ---
-title: "Cara sambungkan nombor whatsapp dengan Wajom"
+title: "Cara sambungkan nombor WhatsApp dengan Wajom"
 description: "tutorial lengkap cara untuk sambungkan nombor WhatsApp kita dengan sistem Wajom."
 category: "basic"
 categoryLabel: "Asas"
