@@ -11,29 +11,35 @@ icon: '<svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" vie
 publishDate: "2025-09-10"
 author: "Hamizah Hamdan"
 ---
-Warm up automation Wajom bantu untuk menghantar mesej secara automatik
 
-No baru yang hendak di warm up tidak perlu di linkkan dengan Wajom. Jadi boleh warm up unlimited number
+## Pengenalan Warm Up WhatsApp
 
-## Navigate to WTC 
+Warm up nombor WhatsApp baru supaya tidak kena banned. Warm up nombor lama yang sudah lama tidak digunakan.
+
+Proses warm up adalah langkah penting untuk memastikan nombor WhatsApp anda tidak ditandai sebagai spam oleh sistem WhatsApp.
+
+## Prasyarat
+
+Sebelum memulakan proses warm up, pastikan:
+- Anda mempunyai akses kepada portal Wajom
+- Nombor WhatsApp sudah didaftarkan dalam sistem
+- Anda memahami kepentingan proses warm up untuk mengelakkan banned
+
+## Navigasi ke Portal WTC
 
 1\. Navigate to [https://portal.wajom.co/auth/whatsapp](https://portal.wajom.co/auth/whatsapp)
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-08/512f3380-756b-44f4-8b62-72a8da4c48a9/ascreenshot.jpeg?tl_px=0,95&br_px=1352,851&force_format=jpeg&q=100&width=1120.0)
 
-
 2\. Click "View Details"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-08/9aa87fcf-68b9-46c4-8e9b-07e3dec854be/user_cropped_screenshot.webp?tl_px=0,0&br_px=1352,947&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=277,639)
 
-
 Alert: Alert! Pastikan guna no personal sebagai no sender. Sebab tu no pertama yang perlu di linkkan dengan Wajom mestilah no personal
-
 
 3\. Click "Automation"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-08/8718901e-1139-455a-b893-6d0458063a10/ascreenshot.jpeg?tl_px=0,0&br_px=1351,755&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=495,2)
-
 
 4\. Click "WTC"
 
@@ -57,7 +63,7 @@ Alert: Alert! Pastikan guna no personal sebagai no sender. Sebab tu no pertama y
 
 Alert: Alert! Pastikan Nombor Sender adalah Nombor Personal @ no yang sudah biasa di gunakan untuk berbalas whatsapp
 
-## Add Receiver
+## Konfigurasi Receiver
 
 8\. Click di bahagian kotak "Nombor telefon Receiver"
 
@@ -102,10 +108,38 @@ Letak 10 minit atau lebih. Kak Miza letak 15 minit
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-08/c4db03cb-ee77-4438-b85e-bbac0df635f7/ascreenshot.jpeg?tl_px=0,191&br_px=1351,947&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=83,546)
 
-## Kak Miza Tips
+## Tips dan Panduan Praktis
 
-Tip: Tahniah! Siap setting warm up kepada nombor baru anda
+**Automasi Penuh**: Warm up automation Wajom bantu untuk menghantar mesej secara automatik
 
-Tip: Tips! Skill elak no baru kena banned - Selepas 2 hari login whatsapp. Boleh linkkan no whatsapp yang baru tu dengan whatsapp web & wajom
+**Unlimited Numbers**: No baru yang hendak di warm up tidak perlu di linkkan dengan Wajom. Jadi boleh warm up unlimited number
 
-Sentiasa warm up nombor anda. Pastikan pause Chat Ai pada nombor yang sedang di warm up
+**Perlindungan Akaun**: Warm up nombor WhatsApp baru supaya tidak kena banned. Warm up nombor lama yang sudah lama tidak digunakan
+
+**Proses Automatik**: Warm up automation akan menghantar mesej kepada receiver secara automatik mengikut jadual yang telah di tetapkan
+
+**Fleksibiliti Receiver**: Receiver boleh reply atau tidak reply mesej warm up. Sistem akan terus menghantar mesej mengikut jadual
+
+**Tempoh Warm Up**: Warm up process akan berjalan selama 30 hari. Selepas 30 hari, nombor sudah selamat untuk digunakan untuk marketing
+
+## Troubleshooting
+
+**Nombor tidak menerima mesej**: 
+- Pastikan nombor receiver aktif dan format betul (60xxxxxxxxx)
+- Semak sama ada nombor tersebut tidak diblok
+
+**Proses warm up terhenti**: 
+- Semak status akaun dan pastikan tiada isu dengan nombor sender
+- Periksa baki kredit atau status langganan
+
+**Mesej tidak dihantar mengikut jadual**: 
+- Periksa tetapan masa penghantaran
+- Pastikan sistem berjalan dengan normal dan tiada gangguan
+
+### Tips Tambahan dari Kak Miza
+
+**Pemilihan Receiver**: Gunakan nombor yang aktif dan sering membalas mesej untuk hasil warm up yang lebih berkesan
+
+**Jadual Optimum**: Tetapkan jarak masa penghantaran yang realistik (tidak terlalu kerap) untuk mengelakkan spam detection
+
+**Monitoring**: Pantau progress warm up secara berkala untuk memastikan proses berjalan lancar

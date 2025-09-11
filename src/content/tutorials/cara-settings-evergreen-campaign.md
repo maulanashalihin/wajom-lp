@@ -12,11 +12,31 @@ publishDate: "2025-09-11"
 author: "Hamizah Hamdan"
 ---
 
+## Pengenalan Evergreen Campaign
+
 Campaign @ kempen bermaksud satu kempen. Prospek akan terima satu kempen sahaja. Nak hantar next kempen anda perlu cipta kempen lain.
 
 Tapi "Evergreen Campaign" adalah kempen bersiri. Prospek boleh terima lebih dari 1 kempen. Anda boleh hantar kempen kepada prospek setiap hari selama 30 hari atau selama mana yang anda nak hantar
 
+- **Automation Penuh**: Campaign berjalan secara automatik tanpa campur tangan manual
+- **Follow Up Berterusan**: Maintain engagement dengan leads secara konsisten
+- **Nurture Prospects**: Educate dan guide prospects melalui customer journey
+- **ROI Maksimum**: Satu setup untuk hasil jangka panjang
+
+Evergreen Campaign sesuai untuk:
+- Follow up leads secara automatik
+- Nurture prospects dengan content yang berterusan
+- Maintain engagement dengan existing customers
+- Automate customer journey dari awareness hingga conversion
+
 Alert: Alert! - "Evergreen Campaing" adalah fungsi Auto Follow Up idaman semua Top Leader. Wajib explore & kuasai !
+
+## Prasyarat
+
+- Akaun Wajom yang aktif dengan akses ke fitur campaign
+- List contacts yang sudah disediakan
+- Content mesej yang telah dirancang
+- Pemahaman asas tentang customer journey
 
 ## Navigate to List
 
@@ -72,60 +92,69 @@ Tentukan tajuk list supaya bila dah ada banyak "List" kita akan ingat setiap "Li
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/5f7843bc-d1b1-450c-8f99-9200628af2be/ascreenshot.jpeg?tl_px=0,0&br_px=1352,755&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=727,240)
 
-## Evergreen Campaign Information
+## Konfigurasi Evergreen Campaign
 
 10\. Klik logo daun (Evergreen Campaign)
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/b1082aad-6af5-4cf0-8111-0242b50e96d8/ascreenshot.jpeg?tl_px=0,0&br_px=1352,755&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=919,94)
 
 
-11\. FYI
-
-1. "Send After" untuk hantar kempen bersiri selang beberapa minit, beberapa jam atau beberapa hari
-2. "Date Time" untuk hantar kempen bersiri dengan memilih tarikh & masa tertentu
-
-Biasanya kita gunakan "Send After"
+11\. Pilih jenis penghantaran campaign:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/d1504581-2d13-4b21-b141-bf16544188db/user_cropped_screenshot.webp?tl_px=0,95&br_px=1352,851&force_format=jpeg&q=100&width=1120.0)
 
+**Pilihan yang tersedia**:
+- **"Send After"**: Hantar kempen bersiri selang beberapa minit, jam atau hari
+- **"Date Time"**: Hantar kempen bersiri pada tarikh & masa tertentu
 
-12\. Ini adalah toggle untuk aktifkan Evergreen Campaign. Biasanya kita off dulu selagi belum siap kempen pertama
+**Cadangan**: Gunakan "Send After" untuk kemudahan pengurusan
+
+12\. Toggle untuk aktifkan Evergreen Campaign:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/cad11c3d-40d4-497a-897a-8d0977368e84/ascreenshot.jpeg?tl_px=0,0&br_px=1351,755&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=57,123)
 
+**Penting**: Pastikan toggle OFF dahulu selagi belum siap kempen pertama
 
-13\. FYI - Ini adalah button untuk kembali ke paparan sebelum nya
+13\. Button navigasi untuk kembali ke paparan sebelumnya:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/3203b123-ebde-4cb6-ab3e-3e0bf219a612/user_cropped_screenshot.webp?tl_px=0,0&br_px=1352,947&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=664,89)
 
 
-14\. FYI "Contact Statistics Message"
 
-Selepas kempen bersiri aktif & run, kita boleh klik "Contact Statistics Message" untuk melihat status penghantaran Evergreen Campain\
-\
-Kita boleh tengok untuk setiap siri kempen berapa banyak mesej dah sent, awaiting, failed
+
+
+14\. "Contact Statistics Message" untuk pemantauan:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/715ac72d-86cc-4e1b-bc99-173c39aad401/user_cropped_screenshot.webp?tl_px=0,0&br_px=1352,947&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=699,89)
 
+**Fungsi pemantauan**:
+- Lihat status penghantaran setiap siri kempen
+- Monitor berapa mesej sent, awaiting, failed
+- Analisis performance campaign secara real-time
 
-15\. FYI
-
-1. Button untuk export Evergreen Campaign
-2. Button untuk import Evergreen Campaign
-
-Fail yang di export @ import ini dalam bentuk Json
-
-Fungsi ini sangat powerfull sebab kita boleh export @ import banyak content. Contohnya leader dah siap content follow up 60 hari. 
-
-Jadi hanya dengan 1 file Json sahaja anak team kita boleh dapat kesemua content 60 hari tanpa perlu buat manual satu persatu untuk 60 hari
+15\. Pengurusan content melalui JSON file:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/9cfcf373-c0eb-40fb-a719-c8fd9e0c1722/user_cropped_screenshot.webp?tl_px=0,95&br_px=1352,851&force_format=jpeg&q=100&width=1120.0)
 
+**Fungsi yang tersedia**:
+1. **Export**: Simpan campaign sebagai JSON file
+2. **Import**: Masukkan campaign dari JSON file
 
-16\. FYI\
-Jika belum ada content Follow Up bersiri, anda boleh menggunakan Ai di Wajom untuk buat content
+**Kelebihan sistem JSON**:
+- Berkongsi content campaign dengan team
+- Backup campaign untuk keselamatan
+- Duplicate campaign untuk list berbeza
+- Leader boleh sediakan template 60 hari untuk team
+
+16\. Gunakan AI Wajom untuk mencipta content:
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/51b51594-c2ae-4aa5-932c-bde4ca6ac10d/ascreenshot.jpeg?tl_px=0,0&br_px=1352,755&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=862,109)
+
+**Kegunaan AI**:
+- Menjana content follow-up yang menarik
+- Variasi mesej untuk elakkan spam
+- Cadangan timing yang optimum
+- Template mengikut industri
 
 
 17\. Click "Add New Campaign"
@@ -323,8 +352,8 @@ No 2 - Content yang telah berjaya di tiru, di import dari Json File leader anda
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-06/39880092-1d5e-412a-8bbd-e0aec776b5cd/user_cropped_screenshot.webp?tl_px=0,0&br_px=1352,947&force_format=jpeg&q=100&width=1120.0)
 
 
-48\. Alhamdulillah! Siap "Evergreen Campaign" untuk Auto Follow Up Prospek!\
-\
+48\. Alhamdulillah! Siap "Evergreen Campaign" untuk Auto Follow Up Prospek!\\
+\\
 Anda boleh ulang step yang sama jika anda ada senarai prospek yang lain
 
 Contoh:
