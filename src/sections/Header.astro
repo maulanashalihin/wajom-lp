@@ -1,6 +1,9 @@
 <!-- Header -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-white/20 shadow-lg">
 	<div class="container mx-auto px-4">
+		<!-- Affiliate Badge Container -->
+		<div id="wajom-affiliate" data-wajom-affiliate-auto-init data-wajom-affiliate-container="#wajom-affiliate"></div>
+		
 		<div class="flex items-center justify-between py-4">
 			<!-- Logo -->
 			<a href="/" class="flex items-center space-x-3 group">
@@ -181,5 +184,71 @@
 			
 			lastScrollY = currentScrollY;
 		});
+
+		// ===== AFFILIATE TRACKER =====
+		console.log('[Affiliate] Initializing...');
+		
+		// Parse URL query params
+		const urlParams = new URLSearchParams(window.location.search);
+		const affName = urlParams.get('aff_name');
+		const affPhone = urlParams.get('aff_phone');
+		
+		console.log('[Affiliate] Query params:', { affName, affPhone });
+		
+		// Get or set affiliate data in sessionStorage
+		let affiliate = null;
+		
+		if (affName && affPhone) {
+			// New affiliate from URL
+			affiliate = { name: affName, phone: affPhone };
+			sessionStorage.setItem('wajom_affiliate', JSON.stringify(affiliate));
+			console.log('[Affiliate] Stored new affiliate:', affiliate);
+		} else {
+			// Try to get from sessionStorage
+			const stored = sessionStorage.getItem('wajom_affiliate');
+			if (stored) {
+				affiliate = JSON.parse(stored);
+				console.log('[Affiliate] Retrieved from storage:', affiliate);
+			}
+		}
+		
+		// Display affiliate badge if we have data
+		if (affiliate && affiliate.name && affiliate.phone) {
+			const container = document.getElementById('wajom-affiliate');
+			if (container) {
+				// Sanitize inputs
+				const safeName = document.createElement('div');
+				safeName.textContent = affiliate.name;
+				const safePhone = document.createElement('div');
+				safePhone.textContent = affiliate.phone;
+				
+				container.innerHTML = `
+					<div class="wajom-affiliate-badge">
+						<div class="affiliate-content">
+							<div class="affiliate-icon">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+									<circle cx="9" cy="7" r="4"></circle>
+									<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+									<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+								</svg>
+							</div>
+							<div class="affiliate-info">
+								<div class="affiliate-label">Dirujuk oleh:</div>
+								<div class="affiliate-details">
+									<strong>${safeName.innerHTML}</strong>
+									<span class="affiliate-phone">${safePhone.innerHTML}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+				console.log('[Affiliate] Badge displayed!');
+			} else {
+				console.warn('[Affiliate] Container #wajom-affiliate not found');
+			}
+		} else {
+			console.log('[Affiliate] No affiliate data to display');
+		}
 	});
 </script>

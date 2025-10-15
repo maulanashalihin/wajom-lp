@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/affiliate.css';
 import WhatsAppWidget from '../components/WhatsAppWidget.astro';
 import Footer from '../components/Footer.astro';
 import ExitIntentPopup from '../components/ExitIntentPopup.astro';
@@ -27,5 +28,8 @@ import ExitIntentPopup from '../components/ExitIntentPopup.astro';
 		
 		<!-- Exit Intent Popup -->
 		<!-- <ExitIntentPopup /> -->
+		
+		<!-- Affiliate Tracker Script - Load setelah DOM ready -->
+		<script is:inline src="/affiliate-tracker.js"></script>
 	</body>
 </html>
