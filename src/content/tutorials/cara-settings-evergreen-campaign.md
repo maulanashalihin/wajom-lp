@@ -1,7 +1,7 @@
 ---
 title: "Cara setting Evergreen Campaign"
 description: "Evergreen Campaign adalah kempen bersiri. Prospek boleh terima lebih dari 1 kempen. Anda boleh hantar kempen kepada prospek setiap hari selama 30 hari atau selama mana yang anda nak hantar"
-category: "Campaign"
+category: "campaign"
 categoryLabel: "Campaign"
 keywords: "upgrade membership wajom plan"
 duration: "8 minit"
