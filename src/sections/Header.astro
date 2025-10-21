@@ -247,6 +247,29 @@
 			} else {
 				console.warn('[Affiliate] Container #wajom-affiliate not found');
 			}
+			
+			// ===== UPDATE ALL WHATSAPP LINKS WITH AFFILIATE PHONE =====
+			console.log('[Affiliate] Updating all WhatsApp links with phone:', affiliate.phone);
+			
+			// Find all links that point to wa.me
+			const allWaLinks = document.querySelectorAll('a[href*="wa.me"]');
+			console.log(`[Affiliate] Found ${allWaLinks.length} WhatsApp links to update`);
+			
+			allWaLinks.forEach((link) => {
+				try {
+					const url = new URL(link.href);
+					// Replace phone number in path (wa.me/PHONE?text=...)
+					const pathParts = url.pathname.split('/');
+					if (pathParts[1]) {
+						pathParts[1] = affiliate.phone;
+						url.pathname = pathParts.join('/');
+						link.href = url.toString();
+						console.log('[Affiliate] Updated link to:', link.href);
+					}
+				} catch (e) {
+					console.error('[Affiliate] Error updating WhatsApp link:', e);
+				}
+			});
 		} else {
 			console.log('[Affiliate] No affiliate data to display');
 		}
