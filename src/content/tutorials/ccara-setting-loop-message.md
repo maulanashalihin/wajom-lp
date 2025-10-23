@@ -1,8 +1,8 @@
 ---
 title: "Cara Setting Loop Message"
 description: "Biasanya digunakan untuk hantar mesej yang sama setiap hari atau setiap dua tiga hari sekali atau setiap minggu atau setiap bulan."
-category: "automation"
-categoryLabel: "Automation"
+category: "campaign"
+categoryLabel: "Campaign"
 keywords: "loop message repeat scheduled automation recurring whatsapp broadcast"
 duration: "5 minit"
 number: "13"
